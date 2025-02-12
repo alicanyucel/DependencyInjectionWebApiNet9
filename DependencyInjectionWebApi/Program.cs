@@ -40,6 +40,11 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+//tamam bitti
+static class TestStatic
+{
+    public static Guid Id { get; set; } = Guid.CreateVersion7();
+}
 public class Test2
 {
     Test _test;
