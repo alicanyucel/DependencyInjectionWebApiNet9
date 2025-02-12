@@ -13,12 +13,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+//minimal api
 app.MapGet("test", () =>
 {
     Test test = new();
     var result = test.Calculate();
     // other process
-    return "HELLO WORLD";
+    return Results.Ok("HELLO WORLD");
 });
 app.UseHttpsRedirection();
 
